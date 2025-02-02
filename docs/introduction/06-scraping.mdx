@@ -81,7 +81,7 @@ const sku = await page.locator('span.product-meta__sku-number').textContent();
 
 ### Current price
 
-DevTools can tell you that the `currentPrice` can be found in a `<span>` element tagged with the `price` class. But it also shows that it is nested as raw text alongside another `<span>` element with the `visually-hidden` class. You don't want that, so you need to filter it out, and the `hasText` helper can be used for that for that.
+DevTools can tell you that the `currentPrice` can be found in a `<span>` element tagged with the `price` class. But it also shows that it is nested as raw text alongside another `<span>` element with the `visually-hidden` class. You don't want that, so you need to filter it out, and the `hasText` helper can be used for that.
 
 ![product current price selector](/img/getting-started/current-price.jpg 'Finding product current price in DevTools.')
 
@@ -117,7 +117,7 @@ const inStockElement = await page
 const inStock = (await inStockElement.count()) > 0;
 ```
 
-For this, all that matter is whether the element exists or not, so you can use the `count()` method to check if there are any elements that match our selector. If there are, that means the product is in stock.
+For this, all that matters is whether the element exists or not, so you can use the `count()` method to check if there are any elements that match our selector. If there are, that means the product is in stock.
 
 And there you have it! All the needed data. For the sake of completeness, let's add all the properties together, and you're good to go.
 
