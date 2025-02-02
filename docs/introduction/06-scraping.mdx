@@ -24,7 +24,7 @@ In the [Real-world project chapter](./real-world-project#choosing-the-data-you-n
 
 Some information is lying right there in front of us without even having to touch the product detail pages. The `URL` we already have - the `request.url`. And by looking at it carefully, we realize that we can also extract the manufacturer from the URL (as all product urls start with `/products/<manufacturer>`). We can just split the `string` and be on our way then!
 
-:::info `request.loaderUrl` vs `request.url`
+:::info `request.loadedUrl` vs `request.url`
 
 You can use `request.loadedUrl` as well. Remember the difference: `request.url` is what you enqueue, `request.loadedUrl` is what gets processed (after possible redirects).
 
