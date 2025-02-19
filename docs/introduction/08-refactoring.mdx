@@ -9,7 +9,7 @@ import Admonition from '@theme/Admonition';
 
 It may seem that the data is extracted and the crawler is done, but honestly, this is just the beginning. For the sake of brevity, we've completely omitted error handling, proxies, logging, architecture, tests, documentation and other stuff that a reliable software should have. The good thing is, **error handling is mostly done by Crawlee itself**, so no worries on that front, unless you need some custom magic.
 
-:::info Navigating automatic bot-protextion avoidance
+:::info Navigating automatic bot-protection avoidance
 
 You might be wondering about the **anti-blocking, bot-protection avoiding stealthy features** and why we haven't highlighted them yet. The reason is straightforward: these features are **automatically used** within the default configuration, providing a smooth start without manual adjustments. However, the default configuration, while powerful, may not cover every scenario.
 
@@ -136,7 +136,7 @@ router.addDefaultHandler(async ({ request, page, enqueueLinks, log }) => {
 });
 ```
 
-Let's explore the changes in more detail. We believe these modification will enhance the readability and manageability of the crawler.
+Let's explore the changes in more detail. We believe these modifications will enhance the readability and manageability of the crawler.
 
 ## Splitting your code into multiple files
 
@@ -144,7 +144,7 @@ There's no reason not to split your code into multiple files and keep your logic
 
 ## Using Crawlee `log` instead of `console.log`
 
-We won't go to great lengths here to talk about `log` object from Crawlee, because you can read all about it in the <ApiLink to="core/class/Log">documentation</ApiLink>, but there's just one thing that we need to stress: **log levels**.
+We won't go to great lengths here to talk about the `log` object from Crawlee, because you can read all about it in the <ApiLink to="core/class/Log">documentation</ApiLink>, but there's just one thing that we need to stress: **log levels**.
 
 Crawlee `log` has multiple log levels, such as `log.debug`, `log.info` or `log.warning`. It not only makes your log more readable, but it also allows selective turning off of some levels by either calling the `log.setLevel()` function or by setting the `CRAWLEE_LOG_LEVEL` environment variable. Thanks to this you can add a lot of debug logs to your crawler without polluting your log when they're not needed, but ready to help when you encounter issues.
 
